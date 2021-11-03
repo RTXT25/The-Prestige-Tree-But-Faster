@@ -2706,8 +2706,8 @@ addLayer("h", {
 		milestones: {
 			0: {
 				unlocked() { return ((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes("h"):false) },
-				requirementDescription: "e300,000,000 Hindrance Spirit",
-				done() { return player.h.points.gte("e3e8") },
+				requirementDescription: "1 Hindrance Spirit",
+				done() { return player.h.points.gte("1") },
 				effectDescription: "Unlock the Repeatable Hindrance Automator.",
 				toggles: [["h", "auto"]],
 			},
@@ -2736,7 +2736,7 @@ addLayer("h", {
 				completionLimit: 1,
 				challengeDescription: "The Booster/Generator bases are divided more over time (this effect is magnified by your Super-Boosters).",
 				unlocked() { return hasChallenge("h", 11) },
-				goal() { return new Decimal(player.ma.current=="h"?"e5e8":"1e3550") },
+				goal() { return new Decimal(player.ma.current=="h"?"1":"1") },
 				currencyDisplayName: "points",
 				currencyInternalName: "points",
 				rewardDescription() { return "Add 0.25 to the Super Booster base"+(((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes("h"):false)?(" and multiply it by your Hyperspace Energy"):"")+"." },
@@ -2746,7 +2746,7 @@ addLayer("h", {
 				completionLimit: 1,
 				challengeDescription: "Space Buildings are respecced, your Space is divided by 10, and Space Building Power is decreased by 90%.",
 				unlocked() { return hasChallenge("h", 12) },
-				goal() { return new Decimal(player.ma.current=="h"?"e5.7e7":"1e435") },
+				goal() { return new Decimal(player.ma.current=="h"?"1":"1") },
 				currencyDisplayName: "generator power",
 				currencyInternalName: "power",
 				currencyLayer: "g",
@@ -2766,7 +2766,7 @@ addLayer("h", {
 				completionLimit: 1,
 				challengeDescription: "Prestige Upgrades, Achievement rewards, & the Primary Space Building are the only things that boost Point generation.",
 				unlocked() { return hasChallenge("h", 21) },
-				goal() { return new Decimal(player.ma.current=="h"?"e8.225e6":"1e3570") },
+				goal() { return new Decimal(player.ma.current=="h"?"1":"1") },
 				currencyDisplayName: "points",
 				currencyInternalName: "points",
 				rewardDescription: "<b>Prestige Boost</b>'s hardcap is now a softcap.",
@@ -2794,7 +2794,7 @@ addLayer("h", {
 				goal() { 
 					let comps = Decimal.mul(challengeCompletions("h", 31), tmp.h.challenges[this.id].scalePower);
 					if (comps.gte(20)) comps = Decimal.pow(comps.sub(19), 1.95).plus(19);
-					return Decimal.pow("1e50", Decimal.pow(comps, 2.5)).times("1e5325") 
+					return Decimal.pow("1", Decimal.pow(comps, 2.5)).times("1") 
 				},
 				completeInBulk() {
 					if (challengeCompletions("h", 31)>=tmp[this.layer].challenges[this.id].completionLimit) return;
@@ -2836,7 +2836,7 @@ addLayer("h", {
 					let comps = Decimal.mul(challengeCompletions("h", 32), tmp.h.challenges[this.id].scalePower);
 					if (comps.gte(3)) comps = comps.sub(0.96);
 					if (comps.gte(3.04)) comps = comps.times(1.425);
-					return Decimal.pow("1e1000", Decimal.pow(comps, 3)).times("1e9000");
+					return Decimal.pow("1", Decimal.pow(comps, 3)).times("1");
 				},
 				completeInBulk() {
 					if (challengeCompletions("h", 32)>=tmp[this.layer].challenges[this.id].completionLimit) return;
@@ -2874,7 +2874,7 @@ addLayer("h", {
 				name: "Central Madness",
 				completionLimit: 1,
 				challengeDescription: "Perform a Row 5 reset, Positivity & Negativity are reset, and Positivity & Negativity nerfs are extremely stronger.",
-				goal: new Decimal("1e765000"),
+				goal: new Decimal("1"),
 				currencyDisplayName: "points",
 				currencyInternalName: "points",
 				rewardDescription: "Unlock 3 new Balance Upgrades.",
@@ -3077,49 +3077,49 @@ addLayer("q", {
 		},
 		milestones: {
 			0: {
-				requirementDescription: "2 Total Quirks",
-				done() { return player.q.total.gte(2) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Booster, Generator, Space, & Time milestones on all resets.",
 			},
 			1: {
-				requirementDescription: "3 Total Quirks",
-				done() { return player.q.total.gte(3) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "You can buy max Time & Space, gain 100% of Enhance Point gain every second, and unlock Auto-Enhancers & Auto-Extra Time Capsules.",
 				toggles: [["e", "auto"], ["t", "autoExt"]],
 			},
 			2: {
-				requirementDescription: "4 Total Quirks",
-				done() { return player.q.total.gte(4) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Time, Enhance, & Space Upgrades on all resets, and keep Space Buildings on Quirk/Hindrance resets.",
 			},
 			3: {
-				requirementDescription: "6 Total Quirks",
-				done() { return player.q.total.gte(6) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Unlock Auto-Time Capsules & Auto-Space Energy.",
 				toggles: [["t", "auto"], ["s", "auto"]],
 			},
 			4: {
-				requirementDescription: "10 Total Quirks",
-				done() { return player.q.total.gte(10) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Unlock Hindrances & Auto-Super Boosters.",
 				toggles: [["sb", "auto"]],
 			},
 			5: {
-				requirementDescription: "25 Total Quirks",
-				done() { return player.q.total.gte(25) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Time, Space, & Super-Boosters reset nothing, and you can destroy individual Space Buildings.",
 			},
 			6: {
 				unlocked() { return player.sg.unlocked },
-				requirementDescription: "1e22 Total Quirks",
-				done() { return player.q.total.gte(1e22) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Unlock Auto-Super Generators & Super-Generators reset nothing.",
 				toggles: [["sg", "auto"]],
 			},
 			7: {
 				unlocked() { return player.sg.unlocked },
-				requirementDescription: "1e60 Total Quirks",
-				done() { return player.q.total.gte(1e60) || hasAchievement("a", 71) },
+				requirementDescription: "1 Total Quirks",
+				done() { return player.q.total.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "You can buy max Super Boosters & Super Generators, and unlock Auto-Space Buildings.",
 				toggles: [["s", "autoBld"]],
 			},
