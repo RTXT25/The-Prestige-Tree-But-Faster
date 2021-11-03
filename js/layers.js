@@ -666,18 +666,18 @@ addLayer("g", {
 		increaseUnlockOrder: ["b"],
 		milestones: {
 			0: {
-				requirementDescription: "8 Generators",
-				done() { return player.g.best.gte(8) || hasAchievement("a", 41) || hasAchievement("a", 71) },
+				requirementDescription: "1 Generators",
+				done() { return player.g.best.gte(1) || hasAchievement("a", 41) || hasAchievement("a", 71) },
 				effectDescription: "Keep Prestige Upgrades on reset.",
 			},
 			1: {
-				requirementDescription: "10 Generators",
-				done() { return player.g.best.gte(10) || hasAchievement("a", 71) },
+				requirementDescription: "1 Generators",
+				done() { return player.g.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "You gain 100% of Prestige Point gain every second.",
 			},
 			2: {
-				requirementDescription: "15 Generators",
-				done() { return player.g.best.gte(15) || hasAchievement("a", 71) },
+				requirementDescription: "1 Generators",
+				done() { return player.g.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "You can buy max Generators.",
 			},
 		},
@@ -1215,7 +1215,7 @@ addLayer("t", {
 		},
 		freeExtraTimeCapsules() {
 			let free = new Decimal(0);
-			if (hasUpgrade("t", 12)) free = free.plus(1);
+			if (hasUpgrade("t", 12)) free = free.plus(69);
 			if (hasUpgrade("t", 24)) free = free.plus(tmp.t.enEff2);
 			if (hasUpgrade("q", 22)) free = free.plus(upgradeEffect("q", 22));
 			return free;
@@ -1271,29 +1271,29 @@ addLayer("t", {
 		},
 		milestones: {
 			0: {
-				requirementDescription: "2 Time Capsules",
-				done() { return player.t.best.gte(2) || hasAchievement("a", 71) },
+				requirementDescription: "1 Time Capsules",
+				done() { return player.t.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Booster/Generator milestones on reset.",
 			},
 			1: {
-				requirementDescription: "3 Time Capsules",
-				done() { return player.t.best.gte(3) || hasAchievement("a", 41) || hasAchievement("a", 71) },
+				requirementDescription: "1 Time Capsules",
+				done() { return player.t.best.gte(1) || hasAchievement("a", 41) || hasAchievement("a", 71) },
 				effectDescription: "Keep Prestige Upgrades on reset.",
 			},
 			2: {
-				requirementDescription: "4 Time Capsules",
-				done() { return player.t.best.gte(4) || hasAchievement("a", 71) },
+				requirementDescription: "1 Time Capsules",
+				done() { return player.t.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Booster Upgrades on all resets.",
 			},
 			3: {
-				requirementDescription: "5 Time Capsules",
-				done() { return player.t.best.gte(5) || hasAchievement("a", 71) },
+				requirementDescription: "1 Time Capsules",
+				done() { return player.t.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Unlock Auto-Boosters.",
 				toggles: [["b", "auto"]],
 			},
 			4: {
-				requirementDescription: "8 Time Capsules",
-				done() { return player.t.best.gte(8) || hasAchievement("a", 71) },
+				requirementDescription: "1 Time Capsules",
+				done() { return player.t.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Boosters reset nothing.",
 			},
 		},
