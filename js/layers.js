@@ -373,12 +373,12 @@ addLayer("b", {
 		milestones: {
 			0: {
 				requirementDescription: "1 Boosters",
-				done() { return player.b.best.gte(1) || hasAchievement("a", 41) || hasAchievement("a", 71) },
+				done() { return player.b.best.gte(1) },
 				effectDescription: "Keep Prestige Upgrades on reset.",
 			},
 			1: {
 				requirementDescription: "1 Boosters",
-				done() { return player.b.best.gte(1) || hasAchievement("a", 71) },
+				done() { return player.b.best.gte(1) },
 				effectDescription: "You can buy max Boosters.",
 			},
 		},
