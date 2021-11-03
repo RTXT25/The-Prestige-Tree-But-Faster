@@ -1,7 +1,7 @@
 let modInfo = {
 	name: "Prestige Tree Rewritten But Faster",
 	id: "ptrbf",
-	author: "Jacorb eddited by RTXT25",
+	author: "Jacorb edited by RTXT25",
 	pointsName: "points",
 	discordName: "PT Rewritten Server",
 	discordLink: "https://discord.gg/TFCHJJT",
@@ -40,7 +40,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
-	if (hasUpgrade('p', 11)) gain = gain.times(69)
+	if (hasUpgrade('p', 11)) gain = gain.times(2)
 	if (hasUpgrade("p", 12)) gain = gain.times(upgradeEffect("p", 12));
 	if (hasUpgrade("p", 13)) gain = gain.times(upgradeEffect("p", 13));
 	if (hasUpgrade("p", 22)) gain = gain.times(upgradeEffect("p", 22));
@@ -60,6 +60,7 @@ function getPointGen() {
 	if (inChallenge("h", 31)) gain = gain.root(tmp.h.pointRoot31);
 	if (hasUpgrade("ss", 43)) gain = gain.pow(gain.lt(tmp.ss.upgrades[43].endpoint)?1.1:1.01);
 	if (hasUpgrade("hn", 31)) gain = gain.pow(1.05);
+	if (hasUpgrade('p', 11)) gain = gain.times(69)
 	return gain
 }
 
