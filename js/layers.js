@@ -372,13 +372,13 @@ addLayer("b", {
 		increaseUnlockOrder: ["g"],
 		milestones: {
 			0: {
-				requirementDescription: "8 Boosters",
-				done() { return player.b.best.gte(8) || hasAchievement("a", 41) || hasAchievement("a", 71) },
+				requirementDescription: "1 Boosters",
+				done() { return player.b.best.gte(1) || hasAchievement("a", 41) || hasAchievement("a", 71) },
 				effectDescription: "Keep Prestige Upgrades on reset.",
 			},
 			1: {
-				requirementDescription: "15 Boosters",
-				done() { return player.b.best.gte(15) || hasAchievement("a", 71) },
+				requirementDescription: "1 Boosters",
+				done() { return player.b.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "You can buy max Boosters.",
 			},
 		},
@@ -1554,18 +1554,18 @@ addLayer("e", {
 		},
 		milestones: {
 			0: {
-				requirementDescription: "2 Enhance Points",
-				done() { return player.e.best.gte(2) || hasAchievement("a", 71) },
+				requirementDescription: "1 Enhance Points",
+				done() { return player.e.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Booster/Generator milestones on reset.",
 			},
 			1: {
-				requirementDescription: "5 Enhance Points",
-				done() { return player.e.best.gte(5) || hasAchievement("a", 41) || hasAchievement("a", 71) },
+				requirementDescription: "1 Enhance Points",
+				done() { return player.e.best.gte(1) || hasAchievement("a", 41) || hasAchievement("a", 71) },
 				effectDescription: "Keep Prestige Upgrades on reset.",
 			},
 			2: {
-				requirementDescription: "25 Enhance Points",
-				done() { return player.e.best.gte(25) || hasAchievement("a", 71) },
+				requirementDescription: "1 Enhance Points",
+				done() { return player.e.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Booster/Generator Upgrades on reset.",
 			},
 		},
@@ -2420,29 +2420,29 @@ addLayer("s", {
 		},
 		milestones: {
 			0: {
-				requirementDescription: "2 Space Energy",
-				done() { return player.s.best.gte(2) || hasAchievement("a", 71) },
+				requirementDescription: "1 Space Energy",
+				done() { return player.s.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Booster/Generator milestones on reset.",
 			},
 			1: {
-				requirementDescription: "3 Space Energy",
-				done() { return player.s.best.gte(3) || hasAchievement("a", 41) || hasAchievement("a", 71) },
+				requirementDescription: "1 Space Energy",
+				done() { return player.s.best.gte(1) || hasAchievement("a", 41) || hasAchievement("a", 71) },
 				effectDescription: "Keep Prestige Upgrades on reset.",
 			},
 			2: {
-				requirementDescription: "4 Space Energy",
-				done() { return player.s.best.gte(4) || hasAchievement("a", 71) },
+				requirementDescription: "1 Space Energy",
+				done() { return player.s.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Keep Generator Upgrades on all resets.",
 			},
 			3: {
-				requirementDescription: "5 Space Energy",
-				done() { return player.s.best.gte(5) || hasAchievement("a", 71) },
+				requirementDescription: "1 Space Energy",
+				done() { return player.s.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Unlock Auto-Generators.",
 				toggles: [["g", "auto"]],
 			},
 			4: {
-				requirementDescription: "8 Space Energy",
-				done() { return player.s.best.gte(8) || hasAchievement("a", 71) },
+				requirementDescription: "1 Space Energy",
+				done() { return player.s.best.gte(1) || hasAchievement("a", 71) },
 				effectDescription: "Generators reset nothing.",
 			},
 		},
