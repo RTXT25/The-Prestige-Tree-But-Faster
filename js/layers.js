@@ -628,7 +628,7 @@ addLayer("g", {
 	autoPrestige() { return (hasMilestone("s", 3) && player.g.auto)&&player.ma.current!="g" },
 	powerExp() {
 		let exp = new Decimal(1/3);
-		if (hasUpgrade("b", 21)) exp = exp.times(2);
+		if (hasUpgrade("b", 21)) exp = exp.times(69);
 		if (hasUpgrade("b", 22)) exp = exp.times(1.2);
 		if (hasUpgrade("q", 13)) exp = exp.times(1.25);
 		if ((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes(this.layer):false) exp = exp.times(1.05);
@@ -2963,7 +2963,7 @@ addLayer("q", {
 	branches: ["e"],
 	enGainMult() {
 		let mult = new Decimal(1);
-		if (hasUpgrade("q", 11)) mult = mult.times(upgradeEffect("q", 11));
+		if (hasUpgrade("q", 11)) mult = mult.times(upgradeEffect("q", 11).times(696969));
 		if (hasUpgrade("q", 21)) mult = mult.times(upgradeEffect("q", 21));
 		if (player.o.unlocked) mult = mult.times(buyableEffect("o", 12));
 		if (player.ba.unlocked) mult = mult.times(tmp.ba.negBuff);
@@ -3037,7 +3037,7 @@ addLayer("q", {
 		11: {
 			title: "Quirk Layers",
 			costBase() {
-				let base = new Decimal(1);
+				let base = new Decimal(1.5)
 				if (hasUpgrade("q", 43)) base = base.sub(.25);
 				if (hasChallenge("h", 42)) base = base.sub(((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes("h"):false)?.2:.15);
 				if (hasAchievement("a", 101)) base = base.sub(.2);
@@ -3888,7 +3888,7 @@ name: "solarity", // This is optional, only used in a few places, If absent it j
 	},
 	milestones: {
 		0: {
-			requirementDescription: "50,000 Total Solarity",
+			requirementDescription: "1 Total Solarity",
 			done() { return player.o.total.gte(5e4) || hasAchievement("a", 71) },
 			effectDescription: "Gain 5% of Solarity gain every second.",
 		},
@@ -4470,23 +4470,23 @@ addLayer("m", {
 	},
 	milestones: {
 		0: {
-			requirementDescription: "2 Total Magic",
-			done() { return player.m.total.gte(2) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Magic",
+			done() { return player.m.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "Automatically gain 100% of Solarity gain & Solarity buyables every second.",
 		},
 		1: {
-			requirementDescription: "3 Total Magic",
-			done() { return player.m.total.gte(3) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Magic",
+			done() { return player.m.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: 'Keep all Hindrance completions on all resets.',
 		},
 		2: {
-			requirementDescription: "10 Total Magic",
-			done() { return player.m.total.gte(10) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Magic",
+			done() { return player.m.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "Automatically gain 100% of Hindrance Spirit gain every second.",
 		},
 		3: {
-			requirementDescription: "5,000 Total Magic",
-			done() { return player.m.total.gte(5e3) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Magic",
+			done() { return player.m.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "You can insert more Magic into your Spells to make them stronger & last longer.",
 			toggles: [{
 				layer: "m",
@@ -4496,8 +4496,8 @@ addLayer("m", {
 		},
 		4: {
 			unlocked() { return hasMilestone("m", 3) },
-			requirementDescription: "1e10 Total Magic",
-			done() { return player.m.total.gte(1e10) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Magic",
+			done() { return player.m.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "When casting a Spell, all Spells are casted equally (magic is distributed).",
 			toggles: [["m", "distrAll"]],
 		},
@@ -4520,7 +4520,7 @@ addLayer("ba", {
 		first: 0,
 	}},
 	color: "#fced9f",
-	requires: new Decimal("1e365"), // Can be a function that takes requirement increases into account
+	requires: new Decimal("1"), // Can be a function that takes requirement increases into account
 	resource: "balance energy", // Name of prestige currency
 	baseResource: "quirks", // Name of resource prestige is based on
 	baseAmount() {return player.q.points}, // Get the current amount of baseResource
@@ -4787,32 +4787,32 @@ addLayer("ba", {
 	},
 	milestones: {
 		0: {
-			requirementDescription: "2 Total Balance Energy",
-			done() { return player.ba.total.gte(2) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Balance Energy",
+			done() { return player.ba.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "Gain 100% of Quirks gained every second, and keep Quirk Upgrades on all resets.",
 		},
 		1: {
-			requirementDescription: "3 Total Balance Energy",
-			done() { return player.ba.total.gte(3) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Balance Energy",
+			done() { return player.ba.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "Unlock Auto-Quirk Layers.",
 			toggles: [["q", "auto"]],
 		},
 		2: {
-			requirementDescription: "10 Total Balance Energy",
-			done() { return player.ba.total.gte(10) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Balance Energy",
+			done() { return player.ba.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "Keep Subspace Upgrades on all resets, unlock Auto-Subspace Energy, and Subspace Energy resets nothing.",
 			toggles: [["ss", "auto"]],
 		},
 		3: {
 			unlocked() { return hasMilestone("ba", 2) },
-			requirementDescription: "200,000 Total Balance Energy",
-			done() { return player.ba.total.gte(2e5) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Balance Energy",
+			done() { return player.ba.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "Unlock Balance Upgrades.",
 		},
 		4: {
 			unlocked() { return hasMilestone("ba", 3) },
-			requirementDescription: "1e12 Total Balance Energy",
-			done() { return player.ba.total.gte(1e12) || (hasMilestone("hn", 0)) },
+			requirementDescription: "1 Total Balance Energy",
+			done() { return player.ba.total.gte(1) || (hasMilestone("hn", 0)) },
 			effectDescription: "You can keep Positivity & Negativity on reset.",
 			toggles: [["ba", "keepPosNeg"]],
 		},
@@ -4952,7 +4952,7 @@ addLayer("ps", {
 			},
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
 				let cost1 = x.div(tmp.ps.buyables[this.id].scaleSlow).times(2).plus(1).floor();
-				let cost2 = x.div(tmp.ps.buyables[this.id].scaleSlow).plus(1).pow(4).times(174).plus(200).floor();
+				let cost2 = x.div(tmp.ps.buyables[this.id].scaleSlow).plus(1).pow(4).times(1).plus(200).floor();
 				return { phantom: cost1, damned: cost2 };
 			},
 			effects(adj=0) {
@@ -5017,7 +5017,7 @@ addLayer("ps", {
 				return slow;
 			},
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-				let cost = Decimal.pow(10, Decimal.pow(2, x.div(this.scaleSlow()))).times(x.eq(0)?1e21:1e22);
+				let cost = Decimal.pow(10, Decimal.pow(2, x.div(this.scaleSlow()))).times(x.eq(0)?1:1);
 				if (hasUpgrade("hn", 51)) cost = cost.div(upgradeEffect("hn", 51));
 				return cost;
 			},
@@ -5165,7 +5165,7 @@ addLayer("hn", {
 	gainMult() {
 		let mult = new Decimal(1);
 		if (player.n.buyables[11].gte(1)) mult = mult.times(buyableEffect("o", 22));
-		if (hasAchievement("a", 91)) mult = mult.times(1.1);
+		if (hasAchievement("a", 91)) mult = mult.times(2);
 		if (hasUpgrade("g", 35) && player.i.buyables[12].gte(2)) mult = mult.times(upgradeEffect("g", 35));
 		if (hasUpgrade("s", 35) && player.i.buyables[12].gte(5)) mult = mult.times(upgradeEffect("s", 35));
 		if (player.ma.unlocked) mult = mult.times(tmp.ma.effect);
@@ -5240,54 +5240,54 @@ addLayer("hn", {
 			effectDescription: "Always have all Magic/Balance milestones.",
 		},
 		1: {
-			requirementDescription: "2 Total Honour",
-			done() { return player.hn.total.gte(2) },
+			requirementDescription: "1 Total Honour",
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "Gain 100% of Magic & Balance Energy every second.",
 		},
 		2: {
-			requirementDescription: "3 Total Honour",
-			done() { return player.hn.total.gte(3) },
+			requirementDescription: "1 Total Honour",
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "The Balance bar behaves as if it is always at the two extremes, and unlock Auto-Spells.",
 			toggles: [["m", "auto"]],
 		},
 		3: {
-			requirementDescription: "4 Total Honour",
-			done() { return player.hn.total.gte(4) },
+			requirementDescription: "1 Total Honour",
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "You can buy max Subspace Energy, and keep Balance Upgrades on all resets.",
 		},
 		4: {
-			requirementDescription: "5 Total Honour",
-			done() { return player.hn.total.gte(5) },
+			requirementDescription: "1 Total Honour",
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "Buying Wraiths does not spend Phantom Souls or Damned Souls, and unlock Auto-Phantom Souls.",
 			toggles: [["ps", "auto"]],
 		},
 		5: {
-			requirementDescription: "6 Total Honour",
-			done() { return player.hn.total.gte(6) },
+			requirementDescription: "1 Total Honour",
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "Unlock Auto-Wraiths.",
 			toggles: [["ps", "autoW"]],
 		},
 		6: {
-			requirementDescription: "10 Total Honour",
-			done() { return player.hn.total.gte(10) },
+			requirementDescription: "1 Total Honour",
+			done() { return player.hn.total.gte(0) },
 			effectDescription: "Phantom Souls reset nothing.",
 		},
 		7: {
-			requirementDescription: "100,000 Total Honour & e11,000,000 Prestige Points",
+			requirementDescription: "1 Total Honour & e11,000,000 Prestige Points",
 			unlocked() { return hasMilestone("hn", 6) },
-			done() { return player.hn.total.gte(1e5) && player.p.points.gte("e11000000") },
+			done() { return player.hn.total.gte(1) && player.p.points.gte("e11000000") },
 			effectDescription: "Unlock Phantom Boosters & more Honour Upgrades.",
 		},
 		8: {
-			requirementDescription: "1e30 Total Honour",
+			requirementDescription: "1 Total Honour",
 			unlocked() { return hasMilestone("hn", 7) && hasUpgrade("hn", 15) },
-			done() { return player.hn.total.gte(1e30) },
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "You can activate all 3 secondary Dust effects at once.",
 		},
 		9: {
-			requirementDescription: "1e300 Total Honour",
+			requirementDescription: "1 Total Honour",
 			unlocked() { return hasMilestone("hn", 8) },
-			done() { return player.hn.total.gte(1e300) },
+			done() { return player.hn.total.gte(1) },
 			effectDescription: "You can buy max Phantom Souls.",
 		},
 	},
@@ -5787,7 +5787,7 @@ addLayer("n", {
 		if (hasUpgrade("hn", 45)) mult = mult.times(upgradeEffect("hn", 45));
 		if (hasUpgrade("g", 35) && player.i.buyables[12].gte(2)) mult = mult.times(upgradeEffect("g", 35));
 		if (hasUpgrade("s", 33) && player.i.buyables[12].gte(5)) mult = mult.times(upgradeEffect("s", 33));
-		if (hasUpgrade("q", 45) && player.i.buyables[12].gte(6)) mult = mult.times(200);
+		if (hasUpgrade("q", 45) && player.i.buyables[12].gte(6)) mult = mult.times(200000);
 		if (player.ge.unlocked) mult = mult.times(tmp.ge.rotEff);
 		if ((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes("i"):false) mult = mult.times(Decimal.pow(10, player.i.nb));
 		if (hasUpgrade("ai", 24)) mult = mult.times(upgradeEffect("ai", 24));
@@ -5804,9 +5804,9 @@ addLayer("n", {
 	doReset(resettingLayer){ 
 		let keep = [];
 		if (!hasUpgrade("hn", 53)) {
-			player.n.purpleDust = new Decimal(0);
-			player.n.blueDust = new Decimal(0);
-			player.n.orangeDust = new Decimal(0);
+			player.n.purpleDust = new Decimal(69);
+			player.n.blueDust = new Decimal(69);
+			player.n.orangeDust = new Decimal(69);
 		}
 		if (layers[resettingLayer].row == 6 && hasMilestone("ma", 0)) keep.push("buyables");
 		let as = JSON.parse(JSON.stringify(player.n.activeSecondaries));
@@ -5896,6 +5896,15 @@ addLayer("n", {
 		player.n.purpleDust = player.n.purpleDust.plus(tmp.n.effect.purple.times(diff));
 		player.n.blueDust = player.n.blueDust.plus(tmp.n.effect.blue.times(diff));
 		player.n.orangeDust = player.n.orangeDust.plus(tmp.n.effect.orange.times(diff));
+		player.n.purpleDust = player.n.purpleDust.plus(tmp.n.effect.purple.times(diff));
+		player.n.blueDust = player.n.blueDust.plus(tmp.n.effect.blue.times(diff));
+		player.n.orangeDust = player.n.orangeDust.plus(tmp.n.effect.orange.times(diff));
+		player.n.purpleDust = player.n.purpleDust.plus(tmp.n.effect.purple.times(diff));
+		player.n.blueDust = player.n.blueDust.plus(tmp.n.effect.blue.times(diff));
+		player.n.orangeDust = player.n.orangeDust.plus(tmp.n.effect.orange.times(diff));
+		player.n.purpleDust = player.n.purpleDust.plus(tmp.n.effect.purple.times(diff));
+		player.n.blueDust = player.n.blueDust.plus(tmp.n.effect.blue.times(diff));
+		player.n.orangeDust = player.n.orangeDust.plus(tmp.n.effect.orange.times(diff));
 	},
 	buyables: {
 		rows: 1,
@@ -5904,8 +5913,8 @@ addLayer("n", {
 			title: "Stellar Clusters",
 			cap() { return new Decimal(5) },
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-				let exp = (player.ma.current=="n")?26.5:1
-				let cost = { purple: Decimal.pow(1e3, x.pow(2)).cbrt().times(50).pow(Math.pow(exp, 0.966)), blue: Decimal.pow(200, x.pow(2)).sqrt().pow(exp), orange: Decimal.pow(1e3, x.pow(2)).root(5).times(150).pow(exp) }
+				let exp = (player.ma.current=="n")?1:1
+				let cost = { purple: Decimal.pow(1, x.pow(1)).cbrt().times(1).pow(Math.pow(exp, 0.966)), blue: Decimal.pow(1, x.pow(1)).sqrt().pow(exp), orange: Decimal.pow(1, x.pow(2)).root(1).times(1).pow(exp) }
 				return cost;
 			},
 			display() { // Everything else displayed in the buyable button after the title
@@ -6444,6 +6453,7 @@ addLayer("i", {
 	base() { return new Decimal(((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes(this.layer):false)?"1e100":"1e250") },
 	gainMult() { // Calculate the multiplier for main currency from bonuses
 		mult = new Decimal(1)
+		mult = mult.times(69).times(420)
 		return mult
 	},
 	gainExp() { // Calculate the exponent on main currency from bonuses
