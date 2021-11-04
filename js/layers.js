@@ -3136,7 +3136,7 @@ addLayer("q", {
 				currencyInternalName: "energy",
 				currencyLayer: "q",
 				unlocked() { return hasChallenge("h", 11)||((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes("q"):false) },
-				effect() { return player.q.total.plus(1).log10().plus(1).pow(player.q.upgrades.length).pow(improvementEffect("q", 11)) },
+				effect() { return player.q.total.plus(1).times(420).pow(improvementEffect("q", 11)) },
 				effectDisplay() { return format(tmp.q.upgrades[11].effect)+"x" },
 				formula: "(log(quirks+1)+1)^upgrades",
 			},
