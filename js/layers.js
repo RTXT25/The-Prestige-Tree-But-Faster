@@ -2971,6 +2971,7 @@ addLayer("q", {
 		},
 		enGainExp() {
 			let exp = player.q.buyables[11].plus(tmp.q.freeLayers).sub(1);
+			if hasUpgrade('q',69) exp = exp.times(420).times(player.q.bayables)
 			return exp;
 		},
 		enEff() {
@@ -3125,8 +3126,12 @@ addLayer("q", {
 			},
 		},
 		upgrades: {
-			rows: 4,
+			rows: 5,
 			cols: 5,
+			69:{
+				title: "UPGRADEEEEEE",
+				description: "Epic Upgrade Deezzzz Nutssss",
+			},
 			11: {
 				title: "Quirk Central",
 				description: "Total Quirks multiply each Quirk Layer's production (boosted by Quirk Upgrades bought).",
