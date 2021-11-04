@@ -6450,7 +6450,7 @@ addLayer("i", {
 	baseAmount() {return player.ss.subspace}, // Get the current amount of baseResource
 	type: "static", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
 	exponent: new Decimal(1.8), // Prestige currency exponent
-	base() { return new Decimal(((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes(this.layer):false)?"1e100":"1e250") },
+	base() { return new Decimal(((Array.isArray(tmp.ma.mastered))?tmp.ma.mastered.includes(this.layer):false)?"1":"1") },
 	gainMult() { // Calculate the multiplier for main currency from bonuses
 		mult = new Decimal(1)
 		mult = mult.times(69).times(420)
@@ -6513,7 +6513,7 @@ addLayer("i", {
 			title: "Imperium Building I",
 			cap() { return new Decimal(5) },
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-				let cost = { ib: x.times(1.4).pow(1.2).plus(1).pow(player.ma.current=="i"?player.i.buyables[12].div(4).plus(1):1).floor(), nb: x.pow(1.4).times(2).plus(4).pow(player.ma.current=="i"?player.i.buyables[12].div(6).plus(1):1).floor() }
+				let cost = { ib: x.times(1).pow(1).plus(1).pow(player.ma.current=="i"?player.i.buyables[12].div(1).plus(1):1).floor(), nb: x.pow(1.4).times(1).plus(1).pow(player.ma.current=="i"?player.i.buyables[12].div(1).plus(1):1).floor() }
 				return cost;
 			},
 			formulas: {
@@ -6550,7 +6550,7 @@ addLayer("i", {
 			title: "Imperium Building II",
 			cap() { return new Decimal(6) },
 			cost(x=player[this.layer].buyables[this.id]) { // cost for buying xth buyable, can be an object if there are multiple currencies
-				let cost = { ib: x.pow(1.2).plus(1).pow(player.ma.current=="i"?player.i.buyables[11].div(2).plus(1):1).floor(), hb: x.pow(1.6).plus(5).pow(player.ma.current=="i"?player.i.buyables[11].div(5).plus(1):1).floor() }
+				let cost = { ib: x.pow(1).plus(1).pow(player.ma.current=="i"?player.i.buyables[11].div(1).plus(1):1).floor(), hb: x.pow(1).plus(1).pow(player.ma.current=="i"?player.i.buyables[11].div(1).plus(1):1).floor() }
 				return cost;
 			},
 			formulas: {
