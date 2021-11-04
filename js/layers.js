@@ -2971,7 +2971,7 @@ addLayer("q", {
 		},
 		enGainExp() {
 			let exp = player.q.buyables[11].plus(tmp.q.freeLayers).sub(1);
-			if hasUpgrade('q',69) exp = exp.times(420).times(player.q.bayables)
+			if hasUpgrade('q',69) exp = exp.times(420)
 			return exp;
 		},
 		enEff() {
