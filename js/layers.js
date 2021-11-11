@@ -277,7 +277,6 @@ addLayer("p", {
 		},
 	},
 })
-
 addLayer("b", {
 	name: "boosters", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "B", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -548,7 +547,6 @@ addLayer("b", {
 		},
 	},
 })
-
 addLayer("g", {
 	name: "generators", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "G", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -893,7 +891,6 @@ addLayer("g", {
 		},
 	},
 })
-
 addLayer("t", {
 	name: "time", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "T", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -1298,7 +1295,6 @@ addLayer("t", {
 		},
 	},
 })
-
 addLayer("e", {
 	name: "enhance", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "E", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -1570,7 +1566,6 @@ addLayer("e", {
 		},
 	},
 })
-
 addLayer("s", {
 	name: "space", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "S", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -2447,7 +2442,6 @@ addLayer("s", {
 		},
 	},
 })
-
 addLayer("sb", {
 	name: "super boosters", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "SB", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -2522,7 +2516,6 @@ addLayer("sb", {
 		auto: false,
 	}},
 })
-
 addLayer("sg", {
 	name: "super generators", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "SG", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -2610,7 +2603,6 @@ addLayer("sg", {
 		time: new Decimal(0),
 	}},
 })
-
 addLayer("h", {
 	name: "hindrance", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "H", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -2913,7 +2905,6 @@ addLayer("h", {
 		},
 	},
 })
-
 addLayer("q", {
 	name: "quirks", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "Q", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -3521,7 +3512,6 @@ addLayer("q", {
 		},
 	},
 })
-
 addLayer("o", {
 name: "solarity", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "O", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -3894,7 +3884,6 @@ name: "solarity", // This is optional, only used in a few places, If absent it j
 		},
 	},
 })
-
 addLayer("ss", {
 	name: "subspace", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "SS", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -4119,7 +4108,6 @@ addLayer("ss", {
 		},
 	},
 })
-
 addLayer("m", {
 	name: "magic", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "M", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -4503,7 +4491,6 @@ addLayer("m", {
 		},
 	},
 })
-
 addLayer("ba", {
 	name: "balance", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "BA", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -4818,7 +4805,6 @@ addLayer("ba", {
 		},
 	},
 })
-
 addLayer("ps", {
 	name: "phantom souls", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "PS", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -5138,7 +5124,6 @@ addLayer("ps", {
 		},
 	},
 })
-
 addLayer("hn", {
 	name: "honour", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "HN", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -5749,7 +5734,6 @@ addLayer("hn", {
 		},
 	},
 })
-
 addLayer("n", {
 	name: "nebula", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "N", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -5987,7 +5971,6 @@ addLayer("n", {
 		},
 	},
 })
-
 addLayer("hs", {
 	name: "hyperspace", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "HS", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -6429,7 +6412,6 @@ addLayer("hs", {
 		},
 	},
 })
-
 addLayer("i", {
 	name: "imperium", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "I", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -6687,7 +6669,6 @@ addLayer("i", {
 		},
 	},
 })
-
 addLayer("ma", {
 	name: "mastery", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "MA", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -6922,7 +6903,6 @@ addLayer("ma", {
 	},
 	rowLimit: 6,
 })
-
 addLayer("ge", {
 	name: "gears", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "GE", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -7235,27 +7215,26 @@ addLayer("ge", {
 			toggles: [["ge", "maxToggle"]],
 		},
 		1: {
-			requirementDescription: "2 Gears",
-			unlocked() { return player.ge.best.gte(1e6) },
+			requirementDescription: "1 Gears",
+			unlocked() { return player.ge.best.gte(1) },
 			done() { return player.ge.best.gte(2) },
 			effectDescription: "Gear Upgrade costs increase independently.",
 		},
 		2: {
-			requirementDescription: "5 Gears & 25 Total Energy",
+			requirementDescription: "1 Gears & 25 Total Energy",
 			unlocked() { return player.en.unlocked },
-			done() { return player.en.unlocked && player.ge.best.gte(5) && player.en.total.gte(25) },
+			done() { return player.en.unlocked && player.ge.best.gte(1) && player.en.total.gte(25) },
 			effectDescription: "Total Energy multiplies Gear gain, and gain 1% of Gear gain every second.",
 		},
 		3: {
-			requirementDescription: "141 Gears",
+			requirementDescription: "1 Gears",
 			unlocked() { return hasUpgrade("ai", 13) },
-			done() { return hasUpgrade("ai", 13) && player.ge.best.gte(141) },
+			done() { return hasUpgrade("ai", 13) && player.ge.best.gte(1) },
 			effectDescription: "Teeth can be partial (can go below 1), Gear Evolution does not force a Row 7 reset, and unlock Auto-Gear Upgrades.",
 			toggles: [["ge", "auto"]],
 		},
 	},
 })
-
 addLayer("mc", {
 	name: "machines", // This is optional, only used in a few places, If absent it just uses the layer id.
 	symbol: "MC", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -7352,15 +7331,15 @@ addLayer("mc", {
 	},
 	milestones: {
 		0: {
-			requirementDescription: "125,000,000 Machine Parts & 1e9 Signals",
+			requirementDescription: "12 Machine Parts & 9 Signals",
 			unlocked() { return player.ne.unlocked && player.mc.unlocked },
-			done() { return player.ne.unlocked && ((player.mc.best.gte(1.25e8) && player.ne.signals.gte(1e9)) || player.mc.milestones.includes(0)) },
+			done() { return player.ne.unlocked && ((player.mc.best.gte(1) && player.ne.signals.gte(9)) || player.mc.milestones.includes(0)) },
 			effectDescription: "Thoughts multiply Machine Part gain, and gain 1% of Machine Part gain every second.",
 		},
 		1: {
-			requirementDescription: "1e50,000 Mech-Energy",
+			requirementDescription: "5 Mech-Energy",
 			unlocked() { return hasUpgrade("ai", 31) },
-			done() { return hasUpgrade("ai", 31) && player.mc.mechEn.times(tmp.mc.mechEnMult).gte("1e50000") },
+			done() { return hasUpgrade("ai", 31) && player.mc.mechEn.times(tmp.mc.mechEnMult).gte("5") },
 			effectDescription: "CPU's effect is raised ^25, and unlock Auto-Motherboard.",
 			toggles: [["mc", "auto"]],
 		},
